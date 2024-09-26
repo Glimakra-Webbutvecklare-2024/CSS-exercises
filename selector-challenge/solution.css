@@ -1,0 +1,76 @@
+/* 1. Klass-selektor */
+.task-1 {
+    color: red;
+}
+
+/* 2. ID-selektor */
+#task-2 {
+    color: green;
+}
+
+/* 3. Element-selektor */
+div {
+    background-color: yellow;
+}
+
+/* 4. Klass och pseudo-klass kombination */
+.task-3:hover {
+    color: purple;
+}
+
+/* 5. Attribut-selektor */
+input[type="text"]:focus {
+    background-color: blue;
+}
+
+/* 6. Pseudo-element selektor */
+.task-4::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* 7. Direkt barn-selektor */
+.task-5 > p:first-child {
+    color: pink;
+}
+
+/* 8. Grupp-selektor */
+.task-6, .task-7 {
+    color: darkgray;
+}
+
+/* 9. Pseudo-klass för nth-child */
+.task-8 li:nth-child(2n) {
+    background-color: yellow;
+}
+
+/* 10. Adjacent sibling selektor */
+.task-9 + .task-9-sibling {
+    color: orange;
+}
+
+/* 11. Universal-selektor */
+section article {
+    background-color: lightblue;
+}
+
+/* 12. Not-selektor */
+.task-10 p:not(.exclude) {
+    color: white;
+}
+
+/* 13. Descendant-selektor */
+.task-11 section p {
+    color: green;
+}
+
+/* 14. Attribut-selektor för specifikt värde */
+a[href="https://example.com"] {
+    color: pink;
+}
+
+/* 15. Before pseudo-element */
+.task-13::before {
+    content: "Varning: ";
+    color: red;
+}
