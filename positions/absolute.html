@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: Absolute</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Position: Absolute</h1>
+    <p>absolute placerar ett element relativt dess närmaste positionerade förfader. Elementet tas bort från det normala dokumentflödet.</p>
+    <p>Den röda rutan är placerad i det övre högra hörnet av containern.</p>
+
+    <div class="container">
+        <div class="box">Absolut Ruta</div>
+    </div>
+
+    <hr>
+
+    <p>Justera top, right, bottom, och left för att placera rutan i olika hörn.</p>
+    <p>Lägg till en bild i .container och placera en text över bilden med hjälp av position: absolute.</p>
+</body>
+</html>

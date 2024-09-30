@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: Static</title>
+    <style>
+        .container {
+            position: relative;
+            border: 1px solid #000;
+            height: 200px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Position: Relative</h1>
+    <p>relative kan du flytta ett element relativt dess ursprungliga position utan att påverka andra element.</p>
+    <p>Den gröna rutan har flyttats 20px nedåt och 30px till höger.</p>
+
+    <div class="container">
+        <div class="box">Flyttad Ruta</div>
+    </div>
+
+    <hr>
+    <p>Övning 1: Ändra värdena för top och left för att flytta rutan till olika positioner.</p>
+    <p>Övning 2: Lägg till en text som visas när man hovrar över rutan genom att använda :hover i CSS.</p>
+</body>
+</html>

@@ -8,6 +8,7 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
 
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
     <style>
         * {
             box-sizing: border-box;
-            font-family: "Segoe UI",Arial,sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
         }
 
         .bg-green {
@@ -38,79 +39,128 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
             font-size: x-large;
         }
 
-        .boxmodel .margin {
-            width: 100%;
+        /* Grundinställningar för alla boxar */
+        .boxmodel {
+            position: relative;
+            width: 600px;
             height: 300px;
-            border: 3px dashed #bbb;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            margin: 50px auto;
+            /* Centrerar boxmodellen på sidan */
         }
 
-        .boxmodel .border {
-            width: 90%;
-            height: 90%;
-            background-color: #04AA6D;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .margin {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: lightgray;
+            text-align: center;
         }
 
-        .boxmodel .padding {
-            width: 90%;
-            height: 90%;
-            background-color: #f1f1f1;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .margin::before {
+            content: "Margin";
         }
 
-        .boxmodel .content {
+        .border {
+            position: relative;
             width: 90%;
             height: 90%;
-            padding: 40px;
-            border: 3px dashed #bbb;
+            left: 3%;
+            top: 3%;
+            background-color: green;
+        }
+
+        .border::before {
+            content: "Border";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+        }
+
+        .padding {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            background-color: lightblue;
+        }
+
+        .padding::before {
+            content: "Padding";
+        }
+
+        .content {
+            position: absolute;
+            width: 90%;
+            height: 90%;
             background-color: white;
-
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+        }
+
+        .content::before {
+            content: "Content";
         }
 
         main {
             /* Låt bredden vara 70% av vad som är möjligt för main att ta upp */
-            width: 70%; 
-            margin-left: auto; /* Låt margin vänster och höger ta jämnt */
+            width: 70%;
+            margin-left: auto;
+            /* Låt margin vänster och höger ta jämnt */
             margin-right: auto;
         }
 
 
-        .example-box {
+        .example-box {}
 
+        .margin-bottom {}
+
+        .note {}
+
+        .btn {}
+
+        .left-bar {}
+
+        .outer-box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            margin: 100px auto;
         }
 
-        .margin-bottom {
+        /* Styla middle-box med både absolute och relative */
+        .middle-box {
+            position: absolute;
+            /* Positioneras relativt outer-box */
+            top: 50px;
+            left: 50px;
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
 
+            /* Det här gör att middle-box fungerar som en referenspunkt för inner-box */
+            position: relative;
+            /* Detta tillåter inner-box att positioneras relativt middle-box */
         }
-        
-        .note {
 
+        /* Styla inner-box */
+        .inner-box {
+            position: absolute;
+            /* Positioneras relativt middle-box */
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+
+            /* Centrera texten */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        .btn {
-
-        }
-
-        .left-bar {
-            
-        }
-
-        
     </style>
 </head>
 
@@ -129,18 +179,23 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
         <p>In CSS, the term &quot;box model&quot; is used when talking about design and layout.</p>
         <p>The CSS box model is essentially a box that wraps around every HTML element.
             It consists of: content, padding, borders and margins. The image below illustrates the box model:</p>
-        <div class="boxmodel">
+        <!-- <div class="boxmodel">
             <div class="margin">
-                Margin
                 <div class="border">
-                    Border
                     <div class="padding">
-                        Padding
-                        <div class="content">Content</div>
+                        <div class="content"></div>
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="outer-box">
+            <div class="middle-box">
+                <div class="inner-box">
+                    Content
+                </div>
+            </div>
         </div>
+
         <p>Explanation of the different parts:</p>
         <ul>
             <li><b>Content</b> - The content of the box, where text and images appear</li>
@@ -163,7 +218,7 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
                 &raquo;</a>
         </div>
         <hr>
-        
+
         <hr>
 
         <h2>Width and Height of an Element</h2>

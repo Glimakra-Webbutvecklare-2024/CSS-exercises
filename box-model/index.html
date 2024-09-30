@@ -66,6 +66,49 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
             
         }
 
+        /* Exempel för att göra en låda, i en låda, i en låda */
+        .outer-box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            margin: 100px auto;
+        }
+
+        /* Styla middle-box med både absolute och relative */
+        .middle-box {
+            position: absolute;
+            /* Positioneras relativt outer-box */
+            top: 50px;
+            left: 50px;
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+
+            /* Det här gör att middle-box fungerar som en referenspunkt för inner-box */
+            position: relative;
+            /* Detta tillåter inner-box att positioneras relativt middle-box */
+        }
+
+        /* Styla inner-box */
+        .inner-box {
+            position: absolute;
+            /* Positioneras relativt middle-box */
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+
+            /* Centrera innehållet */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner-box::before {
+            content: "Content";
+        }
         
     </style>
 </head>
@@ -85,7 +128,7 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
         <p>In CSS, the term &quot;box model&quot; is used when talking about design and layout.</p>
         <p>The CSS box model is essentially a box that wraps around every HTML element.
             It consists of: content, padding, borders and margins. The image below illustrates the box model:</p>
-        <div class="boxmodel">
+        <!-- <div class="boxmodel">
             <div class="margin">
                 <div class="border">
                     <div class="padding">
@@ -93,7 +136,16 @@ UPPGIFT: Titta på sidan https://www.w3schools.com/css/css_boxmodel.asp
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <!-- Exempel för låda i en låda i en låda -->
+        <div class="outer-box">
+            <div class="middle-box">
+                <div class="inner-box">
+                </div>
+            </div>
         </div>
+
         <p>Explanation of the different parts:</p>
         <ul>
             <li><b>Content</b> - The content of the box, where text and images appear</li>

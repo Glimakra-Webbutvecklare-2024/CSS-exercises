@@ -1,0 +1,72 @@
+
+.task-1 {
+    color: red;
+}
+
+#task-2 {
+    color: green;
+}
+
+div {
+    background-color: yellow;
+}
+
+a.task-3:hover {
+    color: purple;
+}
+
+input[type="text"]:focus {
+    background-color: blue;
+}
+
+.task-4::first-letter {
+    color: red;
+    font-size: x-large;
+}
+
+.task-5 > p:first-child{
+    color: pink;
+}
+
+
+.task-6, .task-7 {
+    color: rgb(207, 220, 220);
+}
+
+.task-8 li:nth-child(2n) {
+    color: yellow;
+}
+
+h3.task-9 + * {
+    background-color: orange;
+}
+
+section p {
+    background-color: lightblue;
+}
+
+.task-10 {
+    background-color: unset;
+}
+
+.task-10 p:not(.exclude) {
+    color: red;
+    background-color: unset;
+}
+
+.task-11 {
+    background-color: unset;
+}
+
+.task-11 section {
+    background-color: green;
+}
+
+a[href="https://example.com"] {
+    background-color: pink;
+}
+
+h2.task-13::before {
+    content: "Varning: ";
+    color: red;
+}

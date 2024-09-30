@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Uppgift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="title">CSS Selector Challenge</h1>
+
+    <!-- Klass selektor
+    Tänk på att du gör en klass-selektor med ".klass-namn"
+    Undersök egenskapen color
+    -->
+    <p class="task-1">Gör mig röd</p>
+
+    <!-- ID selektor
+    Tänk på att ID-selektor skrivs med "#" följt av ID-namnet
+    Använd egenskapen color
+    -->
+    <p id="task-2">Gör mig grön</p>
+
+    <!-- Element selektor
+    Använd elementnamnet direkt som selektor
+    Använd egenskapen background-color
+    -->
+    <div>Gör mig gul</div>
+
+    <!-- Klass och pseudo-klass kombination
+    Tänk på att använda ":hover" pseudo-klass för att skapa en effekt vid hover
+    Använd egenskapen color
+    -->
+    <a href="#" class="task-3">Gör mig lila när du hovrar över mig</a>
+
+    <!-- Attribut selektor
+    Du kan använda attribut-selektorer för att välja element med ett specifikt attribut och värde
+    Använd egenskapen background-color
+    -->
+    <input type="text" placeholder="Gör mig med blå bakgrund när jag är i fokus">
+
+    <!-- Pseudo-element selektor
+    Använd "::first-letter" för att styla första bokstaven i elementet
+    -->
+    <p class="task-4">Gör första bokstaven i mig större och röd</p>
+
+    <!-- Direkt barn selektor
+    Använd selektorn ">" för att välja direkt barn till ett element
+    -->
+    <div class="task-5">
+            <p>Gör mig rosa, men inte andra p i denna div</p>
+            <p>Jag ska inte bli påverkad</p>
+    </div>
+
+    <!-- Gruppselektor
+    Du kan styla flera element samtidigt genom att separera dem med kommatecken
+    Använd egenskapen color
+    -->
+    <h2 class="task-6">Gör både mig och task-7 mörkgrå</h2>
+    <h2 class="task-7">Gör både mig och task-6 mörkgrå</h2>
+
+    <!-- Pseudo-klass för nth-child
+    Använd ":nth-child()" för att välja specifika barn till ett element, t.ex. varannan li
+    -->
+    <ul class="task-8">
+        <li>Jag ska förbli oförändrad</li>
+        <li>Jag ska bli gul</li>
+        <li>Jag ska förbli oförändrad</li>
+        <li>Jag ska bli gul</li>
+        <li>Jag ska bli oförändrad</li>
+        <li>Jag ska bli gul</li>
+    </ul>
+
+    <!-- Adjacent sibling selektor
+    Använd "+" för att styla syskonelement som kommer direkt efter ett annat element
+    -->
+    <h3 class="task-9">Jag är oförändrad</h3>
+    <quote class="task-9-sibling">Gör mig orange, men inte den första h3</quote>
+
+    <!-- Universal selektor
+    Använd "*" för att välja alla element
+    -->
+    <section>
+        <article>Gör mig ljusblå</article>
+        <p>Gör mig ljusblå</p>
+    </section>
+
+    <!-- Not selektor
+    Använd ":not()" för att exkludera specifika element från en selektor
+    -->
+    <div class="task-10">
+        <p>Gör mig red</p>
+        <p class="exclude">Jag ska inte påverkas</p>
+    </div>
+
+    <!-- Descendant selektor
+    Använd en descendant-selektor (utan >) för att välja alla element som ligger inuti ett annat element
+    -->
+    <div class="task-11">
+        <section>
+            <p>Gör mig grön</p>
+            <div>Jag ska också påverkas</div>
+        </section>
+    </div>
+
+    <!-- Attribut selektor för specifikt värde
+    Använd selektor för att välja ett element baserat på ett attributvärde, t.ex. href
+    -->
+    <a href="https://example.com" class="task-12">Gör mig rosa</a>
+    <a href="https://another-example.com" class="task-12">Jag ska inte påverkas</a>
+
+    <!-- Before pseudo-element
+    Använd "::before" för att lägga till innehåll före ett element
+    -->
+    <h2 class="task-13">Lägg till texten "Varning: " före mig i rött</h2>
+
+</body>
+</html>

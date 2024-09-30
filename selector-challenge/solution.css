@@ -50,7 +50,7 @@ input[type="text"]:focus {
 }
 
 /* 11. Universal-selektor */
-section article {
+section * {
     background-color: lightblue;
 }
 
