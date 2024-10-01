@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: Static</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            /* position: static; Detta är standard och behöver inte anges */
+        }
+
+        .box:nth-child(even) { /* För skilja på boxarna*/
+            background-color: lightsteelblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Position: Static</h1>
+    <p>static är standardvärdet för alla element. Element positioneras enligt sidans normala flöde.</p>
+    <p>Dessa rutor är positionerade enligt det naturliga flödet.</p>
+
+    <div class="box">Ruta 1</div>
+    <div class="box">Ruta 2</div>
+    <div class="box">Ruta 3</div>
+    <div class="box">Ruta 4</div>
+    <div class="box">Ruta 5</div>
+    <div class="box">Ruta 6</div>
+
+    <hr>
+
+    <p>Övning 1: Lägg till fler .box-element nedan och observera hur de staplas vertikalt.</p>
+    <p>Övning 2: Ändra width och height på .box i CSS och observera förändringen.</p>
+    
+</body>
+</html>

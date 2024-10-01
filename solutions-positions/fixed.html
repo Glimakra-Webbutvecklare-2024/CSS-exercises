@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: Fixed</title>
+    <style>
+        body {
+            height: 2000px; /* För att möjliggöra skrollning */
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+
+        .fixed-button {
+            position: fixed;
+            bottom: 6%;
+            right: 1%;
+            padding: 4px 8px;
+        }
+
+        .fixed-button a {
+            text-decoration: none;
+            font-weight: 600;
+            color: black;
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px;
+            position: fixed;
+            background-color: black;
+            color: white;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">Fast Navigationsmeny</div>
+    <h1 id="head-1">Position: Fixed</h1>
+    <p>fixed placerar ett element relativt visningsfönstret. Elementet förblir på samma plats även när sidan skrollas.</p>
+    <p>Skrolla nedåt för att se att navigationsmenyn förblir på plats.</p>
+
+    <button class="fixed-button"><a href="#head-1">To Top</a></button>
+    <footer>I am a footer</footer>
+
+    <p>Övning 1: Skapa en knapp med position: fixed placerad i nedre högra hörnet som länkar till toppen av sidan.</p>
+	<p>Övning 2: Lägg till en sidfot som förblir längst ner på sidan även när man skrollar.</p>
+</body>
+</html>

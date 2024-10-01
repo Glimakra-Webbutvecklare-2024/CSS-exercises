@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position: Sticky</title>
+    <style>
+         body {
+            height: 2000px;
+        }
+    
+        .header {
+            background-color: lightcoral;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        .navbar {
+            position: sticky;
+            left: 0;
+            top: 16%;
+            background-color: antiquewhite;
+            padding: 16px;
+            width: fit-content;
+        }
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            margin: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">Klistrig Rubrik</div>
+
+    <h1>Position: Sticky</h1>
+    <p>sticky är en hybrid mellan relative och fixed. Elementet beter sig som relativt tills en viss skrollposition nås,
+        då det blir fixerat.</p>
+    <p>Skrolla nedåt för att se att rubriken stannar högst upp.</p>
+
+    <aside class="navbar">
+        <ul>
+            <li><a href="#">link 1</a></li>
+            <li><a href="#">link 2</a></li>
+            <li><a href="#">link 3</a></li>
+            <li><a href="#">link 4</a></li>
+        </ul>
+    </aside>
+    
+    <hr>
+
+    <p>Övning 1: Skapa en vertikal meny på vänster sida som blir klistrig när den når toppen av visningsfönstret.</p>
+    <p>Övning 2: Ändra top värdet för .header för att se hur det påverkar när elementet blir klistrigt.</p>
+</body>
+
+</html>
