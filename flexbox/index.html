@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flexbox Övningar</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    /* Enkel styling för att förbättra läsbarheten */
+    .container, .card-container, .nav, .main-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .box, .card, .nav-link, .item {
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 5px;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #000;
+    }
+    .header, .footer, .sidebar, .content {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    section {
+      margin-bottom: 96px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Övningar börjar här -->
+
+<section>
+  <h2>Övning 1: Grundläggande Horisontell Justering</h2>
+  <p>Använd Flexbox för att visa elementen med klassen <code>.box</code> horisontellt.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 2: Centrera ett Element</h2>
+  <p>Centrera elementet med klassen <code>.box</code> både vertikalt och horisontellt inom <code>.container</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container" style="height: 200px;">
+    <div class="box">Centrerad Låda</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 3: Omvänd Ordning på Element</h2>
+  <p>Använd Flexbox för att vända ordningen på <code>.box</code>-elementen. Dvs. Tredje, Andra, Första</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container">
+    <div class="box">Första</div>
+    <div class="box">Andra</div>
+    <div class="box">Tredje</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 4: Wrapping av Element</h2>
+  <p>Gör så att <code>.box</code>-elementen wrappar över flera rader när de överskrider behållarens bredd.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+    <div class="box">Låda 5</div>
+    <div class="box">Låda 6</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 5: Flex grow och shrink</h2>
+  <p>Kontrollera storleken på <code>.box</code>-elementen med hjälp av <code>flex-grow</code> och <code>flex-shrink</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container">
+    <div class="box">Kort innehåll</div>
+    <div class="box">Lite längre innehåll här</div>
+    <div class="box">Ännu längre innehåll som behöver mer utrymme</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 6: Justera Element</h2>
+  <p>Centrera <code>.box</code>-elementen vertikalt längs <b>cross axis</b> (korsaxeln).</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container" style="height: 200px;">
+    <div class="box">Element 1</div>
+    <div class="box">Element 2</div>
+    <div class="box">Element 3</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 7: Använda Order</h2>
+  <p>Omarrangera <code>.box</code>-elementen med hjälp av <code>order</code>-egenskapen så att "Footer" visas före "Content".</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container">
+    <div class="box">Header</div>
+    <div class="box">Content</div>
+    <div class="box">Footer</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 8: Navigationsmeny</h2>
+  <p>Skapa en vertikalt navigationsmeny med hjälp av Flexbox. Lägg gärna till styling vid hover.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <nav class="nav">
+    <a href="#" class="nav-link">Hem</a>
+    <a href="#" class="nav-link">Om oss</a>
+    <a href="#" class="nav-link">Tjänster</a>
+    <a href="#" class="nav-link">Kontakt</a>
+  </nav>
+</section>
+
+<section>
+  <h2>Övning 9: Kortlayout</h2>
+  <p>Skapa en responsiv kortlayout där <code>.card</code>-elementen visas i en grid (rutnätsliknande) layout som anpassar sig efter skärmens storlek. Varje kort ska ha bilden till vänster och texten till höger. Lägg till mer html element eller css-klasser vid behov.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://via.placeholder.com/200x300" alt="placeholder">
+      <h3>Kort 1</h3>
+      <p>Innehåll i kort 1</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x300" alt="placeholder">
+      <h3>Kort 2</h3>
+      <p>Innehåll i kort 2</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x300" alt="placeholder">
+      <h3>Kort 3</h3>
+      <p>Innehåll i kort 3</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x300" alt="placeholder">
+      <h3>Kort 4</h3>
+      <p>Innehåll i kort 4</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 10: Nästlade Flex-behållare</h2>
+  <p>Bygg en layout som innehåller <code>.header</code>, <code>.content-container</code>, <code>.sidebar</code>, <code>.content</code> och <code>.footer</code>.</p>
+  <p><code>.header</code> ska vara högst upp</p>
+  <p><code>.footer</code> ska vara längst ner</p>
+  <p><code>.sidebar</code> ska vara vid sidan om <code>.content</code></p>
+  
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="main-container">
+    <header class="header">Header</header>
+    <div class="content-container">
+      <aside class="sidebar">Sidebar</aside>
+      <div class="content">Huvudinnehåll</div>
+    </div>
+    <footer class="footer">Footer</footer>
+  </div>
+</section>
+
+</body>
+</html>
