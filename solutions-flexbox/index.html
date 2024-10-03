@@ -269,17 +269,27 @@
     
     .content-container {
       display: flex;
-      flex-wrap: nowrap;
+
+      /* Om sidebar + content har en större width än vad detta elementet har, wrappa */
+      flex-wrap: wrap;
     }
 
     .sidebar {
-      /* flex-grow: 1; */
-      width: 30%;
+      /* Om det fiins mer/mindre utrymme krymp/väx med en faktor av 1 */
+      flex-shrink: 1;
+      flex-grow: 1;
+
+      /* initallt värde på bredden */
+      flex-basis: 200px;
     }
 
     .content {
-      /* flex-grow: 3; */
-      width: 70%;
+      /* Om det fiins mer/mindre utrymme krymp/väx med en faktor av 3 */
+      flex-shrink: 3;
+      flex-grow: 3;
+
+      /* initallt värde på bredden */
+      flex-basis: 300px;  
     }
 
   </style>
