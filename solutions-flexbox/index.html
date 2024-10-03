@@ -74,7 +74,9 @@
   <style>
     .container3 {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+        /* flex-direction: row-reverse;
+        justify-content: flex-end; */
     }
   </style>
   <div class="container3">
@@ -91,6 +93,8 @@
      .container4 {
         display: flex;
         flex-wrap: wrap;
+        width: 300px;
+        background-color: #f0f0f0;
     }
   </style>
   <div class="container4">
@@ -112,22 +116,19 @@
     }
 
     .small {
-        flex-grow: 1;
-        /* small ska krypa 3x snabbare */
-        flex-shrink: 3; 
+      flex-grow: 1;
+      flex-shrink: 1;
     }
 
     .medium {
-        flex-grow: 2;
-        flex-shrink: 2;
+      flex-grow: 1;
+      flex-shrink: 1;
     }
 
     .big {
-        /* big ska växa 3x snabbare */
-        flex-grow: 3;
-        flex-shrink: 1;
+      flex-grow: 3;
+      flex-shrink: 3;
     }
-
   </style>
   <div class="container5">
     <div class="box small">Kort innehåll</div>
@@ -140,7 +141,12 @@
   <h2>Övning 6: Justera Element</h2>
   <p>Centrera <code>.box</code>-elementen vertikalt längs <b>cross axis</b> (korsaxeln).</p>
   <style>
-    /* Lägg din CSS-styling här */
+    .container6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
   </style>
   <div class="container6" style="height: 200px;">
     <div class="box">Element 1</div>
@@ -153,19 +159,46 @@
   <h2>Övning 7: Använda Order</h2>
   <p>Omarrangera <code>.box</code>-elementen med hjälp av <code>order</code>-egenskapen så att "Footer" visas före "Content".</p>
   <style>
-    /* Lägg din CSS-styling här */
+    .container7 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header1 {
+      order: 1;
+    }
+
+    .content1 {
+      order: 3;
+    }
+
+    .footer1 {
+      order: 2;
+    }
+    
   </style>
-    <div class="box">Header</div>
-    <div class="box">Content</div>
-    <div class="box">Footer</div>
+  <div class="container7">
+    <div class="box header1">Header</div>
+    <div class="box content1">Content</div>
+    <div class="box footer1">Footer</div>
   </div>
 </section>
 
 <section>
   <h2>Övning 8: Navigationsmeny</h2>
-  <p>Skapa en vertikalt navigationsmeny med hjälp av Flexbox. Lägg gärna till styling vid hover.</p>
+  <p>Skapa en vertikal navigationsmeny med hjälp av Flexbox. Lägg gärna till styling vid hover.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    .nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-link:hover {
+      background-color: lightpink;
+      transition: 0.33s;
+    }
+
+
   </style>
   <nav class="nav">
     <a href="#" class="nav-link">Hem</a>
@@ -179,28 +212,45 @@
   <h2>Övning 9: Kortlayout</h2>
   <p>Skapa en responsiv kortlayout där <code>.card</code>-elementen visas i en grid (rutnätsliknande) layout som anpassar sig efter skärmens storlek. Varje kort ska ha bilden till vänster och texten till höger. Lägg till mer html element eller css-klasser vid behov.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      display: flex;
+      gap: 12px;
+      max-width: 400px;
+    }
   </style>
   <div class="card-container">
     <div class="card">
       <img src="https://via.placeholder.com/200x300" alt="placeholder">
-      <h3>Kort 1</h3>
-      <p>Innehåll i kort 1</p>
+      <div class="card-text">
+        <h3>Kort 1</h3>
+        <p>Innehåll i kort 1</p>
+      </div>
     </div>
     <div class="card">
       <img src="https://via.placeholder.com/200x300" alt="placeholder">
-      <h3>Kort 2</h3>
-      <p>Innehåll i kort 2</p>
+      <div class="card-text">
+        <h3>Kort 2</h3>
+        <p>Innehåll i kort 2</p>
+      </div>
     </div>
     <div class="card">
       <img src="https://via.placeholder.com/200x300" alt="placeholder">
-      <h3>Kort 3</h3>
-      <p>Innehåll i kort 3</p>
+      <div class="card-text">
+        <h3>Kort 3</h3>
+        <p>Innehåll i kort 3</p>
+      </div>
     </div>
     <div class="card">
       <img src="https://via.placeholder.com/200x300" alt="placeholder">
-      <h3>Kort 4</h3>
-      <p>Innehåll i kort 4</p>
+      <div class="card-text">
+        <h3>Kort 4</h3>
+        <p>Innehåll i kort 4</p>
+      </div>
     </div>
   </div>
 </section>
@@ -212,7 +262,26 @@
   <p><code>.footer</code> ska vara längst ner</p>
   <p><code>.sidebar</code> ska vara vid sidan om <code>.content</code></p>
   <style>
-    /* Lägg din CSS-styling här */
+    .main-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .content-container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .sidebar {
+      /* flex-grow: 1; */
+      width: 30%;
+    }
+
+    .content {
+      /* flex-grow: 3; */
+      width: 70%;
+    }
+
   </style>
   <div class="main-container">
     <header class="header">Header</header>
