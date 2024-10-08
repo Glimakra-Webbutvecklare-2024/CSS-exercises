@@ -1,0 +1,97 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+main {
+    background-color: antiquewhite;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav {
+    background-color: orange;
+    display: flex;
+    padding: 0 10px;
+}
+
+.nav-links-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list-item {
+    margin: 0 3px;
+}
+
+.nav-list-item::after {
+    content: " |";
+}
+
+.nav-list-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list-item a:hover {
+    text-decoration: underline;
+}
+
+.nav-list-item:last-child::after {
+    content: "";
+}
+
+.posts-list {
+    padding-top: 0px;
+}
+
+.post-list-item p {
+   margin: 2px;
+}
+
+.post-list-item {
+    padding: 10px;
+    color: gray;
+    margin: 4px 0px;
+    padding-top: 0px;
+}
+
+.post-list-item .title {
+    font-weight: 550;
+}
+
+.post-list-item .votearrow img {
+    width: 12px;
+    margin-bottom: 2px;
+}
+
+.post-list-item .site {
+    margin-left: 4px;
+    font-size: smaller;
+}
+
+.post-list-item .additional-info {
+    font-size: smaller;
+}
+
+.post-list-item .site::before {
+    content: "(";
+}
+
+.post-list-item .site::after {
+    content: ")";
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
