@@ -1,0 +1,198 @@
+Här är en motsvarande index.html-fil med övningar för CSS Grid:
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Övningar</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    /* Enkel styling för att förbättra läsbarheten */
+    .container, .card-container, .nav, .main-container {
+      border: 1px solid #ccc;
+      padding: 8px;
+      margin-bottom: 20px;
+    }
+    .box, .card, .nav-link, .item {
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 5px;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #000;
+    }
+    .header, .footer, .sidebar, .content {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    section {
+      margin-bottom: 96px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Övningar börjar här -->
+
+<section>
+  <h2>Övning 1: Grundläggande Grid Layout</h2>
+  <p>Använd CSS Grid för att arrangera elementen med klassen <code>.box</code> i en 3-kolumns layout inom <code>.container1</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container1">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+    <div class="box">Låda 5</div>
+    <div class="box">Låda 6</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 2: Spanning av Rows och Columns</h2>
+  <p>Använd CSS Grid för att få vissa <code>.box</code>-element att spänna över flera rader eller kolumner inom <code>.container2</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container2">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2 (spänner över två kolumner)</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 3: Grid Gap</h2>
+  <p>Lägg till mellanrum mellan rader och kolumner i <code>.container3</code> med hjälp av <code>grid-gap</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container3">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+    <div class="box">Låda 5</div>
+    <div class="box">Låda 6</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 4: Justering av Element</h2>
+  <p>Centrera <code>.box</code>-elementen inom sina grid-celler med hjälp av <code>align-items</code> och <code>justify-items</code> i <code>.container4</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container4" style="height: 200px;">
+    <div class="box">Element 1</div>
+    <div class="box">Element 2</div>
+    <div class="box">Element 3</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 5: Grid Template Areas</h2>
+  <p>Definiera grid-områden för att skapa en layout med header, sidebar, content och footer inom <code>.container5</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container5">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Huvudinnehåll</div>
+    <div class="footer">Footer</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 6: Implicit Grid</h2>
+  <p>Skapa en grid-layout där nya rader skapas automatiskt för att rymma alla <code>.box</code>-element i <code>.container6</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container6">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+    <div class="box">Låda 5</div>
+    <div class="box">Låda 6</div>
+    <div class="box">Låda 7</div>
+    <div class="box">Låda 8</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 7: Grid-auto-flow</h2>
+  <p>Använd <code>grid-auto-flow</code> för att kontrollera hur elementen placeras i <code>.container7</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container7">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+    <div class="box">Låda 5</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 8: Överlappande Element</h2>
+  <p>Skapa en grid där vissa <code>.box</code>-element överlappar varandra i <code>.container8</code> genom att positionera dem på samma grid-cell.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container8">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 9: Responsiv Grid</h2>
+  <p>Skapa en grid-layout som anpassar antalet kolumner baserat på skärmbredden i <code>.container9</code> med hjälp av <code>repeat</code> och <code>auto-fit</code> eller <code>auto-fill</code>.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="container9">
+    <div class="box">Låda 1</div>
+    <div class="box">Låda 2</div>
+    <div class="box">Låda 3</div>
+    <div class="box">Låda 4</div>
+    <div class="box">Låda 5</div>
+    <div class="box">Låda 6</div>
+  </div>
+</section>
+
+<section>
+  <h2>Övning 10: Komplett Sidlayout</h2>
+  <p>Bygg en komplett sidlayout med header, navigering, innehåll och footer inom <code>.main-container</code> med hjälp av CSS Grid.</p>
+  <style>
+    /* Lägg din CSS-styling här */
+  </style>
+  <div class="main-container">
+    <header class="header">Header</header>
+    <nav class="nav">
+      <a href="#" class="nav-link">Hem</a>
+      <a href="#" class="nav-link">Om oss</a>
+      <a href="#" class="nav-link">Tjänster</a>
+      <a href="#" class="nav-link">Kontakt</a>
+    </nav>
+    <div class="content">Huvudinnehåll</div>
+    <footer class="footer">Footer</footer>
+  </div>
+</section>
+
+</body>
+</html>
