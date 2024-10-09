@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <title>CSS Grid Övningar</title>
+  <title>CSS Grid Övningar med Lösningar</title>
   <style>
     body {
       font-family: Verdana, sans-serif;
@@ -42,7 +42,11 @@
   <h2>Övning 1: Grundläggande Grid Layout</h2>
   <p>Använd CSS Grid för att arrangera elementen med klassen <code>.box</code> i en 3-kolumns layout inom <code>.container1</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   </style>
   <div class="container1">
     <div class="box">Låda 1</div>
@@ -55,10 +59,19 @@
 </section>
 
 <section>
-  <h2>Övning 2: Spanning av Rows och Columns</h2>
+  <h2>Övning 2: Spanning av Rader och Kolumner</h2>
   <p>Använd CSS Grid för att få vissa <code>.box</code>-element att spänna över flera rader eller kolumner inom <code>.container2</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 10px;
+    }
+    .container2 .box:nth-child(2) {
+      grid-column: span 2;
+    }
   </style>
   <div class="container2">
     <div class="box">Låda 1</div>
@@ -72,7 +85,12 @@
   <h2>Övning 3: Grid Gap</h2>
   <p>Lägg till mellanrum mellan rader och kolumner i <code>.container3</code> med hjälp av <code>grid-gap</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
   </style>
   <div class="container3">
     <div class="box">Låda 1</div>
@@ -88,9 +106,16 @@
   <h2>Övning 4: Justering av Element</h2>
   <p>Centrera <code>.box</code>-elementen inom sina grid-celler med hjälp av <code>align-items</code> och <code>justify-items</code> i <code>.container4</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container4 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-items: center;
+      height: 200px;
+    }
   </style>
-  <div class="container4" style="height: 200px;">
+  <div class="container4">
     <div class="box">Element 1</div>
     <div class="box">Element 2</div>
     <div class="box">Element 3</div>
@@ -101,7 +126,28 @@
   <h2>Övning 5: Grid Template Areas</h2>
   <p>Definiera grid-områden för att skapa en layout med header, sidebar, content och footer inom <code>.container5</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container5 {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 10px;
+    }
+    .header {
+      grid-area: header;
+    }
+    .sidebar {
+      grid-area: sidebar;
+    }
+    .content {
+      grid-area: content;
+    }
+    .footer {
+      grid-area: footer;
+    }
   </style>
   <div class="container5">
     <div class="header">Header</div>
@@ -115,7 +161,13 @@
   <h2>Övning 6: Implicit Grid</h2>
   <p>Skapa en grid-layout där nya rader skapas automatiskt för att rymma alla <code>.box</code>-element i <code>.container6</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container6 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 10px;
+    }
   </style>
   <div class="container6">
     <div class="box">Låda 1</div>
@@ -133,7 +185,16 @@
   <h2>Övning 7: Grid-auto-flow</h2>
   <p>Använd <code>grid-auto-flow</code> för att kontrollera hur elementen placeras i <code>.container7</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container7 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: dense;
+      grid-gap: 10px;
+    }
+    .container7 .box:nth-child(3) {
+      grid-column: span 2;
+    }
   </style>
   <div class="container7">
     <div class="box">Låda 1</div>
@@ -148,11 +209,31 @@
   <h2>Övning 8: Överlappande Element</h2>
   <p>Skapa en grid där vissa <code>.box</code>-element överlappar varandra i <code>.container8</code> genom att positionera dem på samma grid-cell.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container8 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 100px;
+      grid-gap: 10px;
+      position: relative;
+    }
+    .container8 .box:nth-child(1) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    .container8 .box:nth-child(2) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+    .container8 .box:nth-child(3) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+    }
   </style>
   <div class="container8">
     <div class="box">Låda 1</div>
-    <div class="box">Låda 2</div>
+    <div class="box">Låda 2 (överlappar Låda 1)</div>
     <div class="box">Låda 3</div>
   </div>
 </section>
@@ -161,7 +242,12 @@
   <h2>Övning 9: Responsiv Grid</h2>
   <p>Skapa en grid-layout som anpassar antalet kolumner baserat på skärmbredden i <code>.container9</code> med hjälp av <code>repeat</code> och <code>auto-fit</code> eller <code>auto-fill</code>.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .container9 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 10px;
+    }
   </style>
   <div class="container9">
     <div class="box">Låda 1</div>
@@ -177,7 +263,35 @@
   <h2>Övning 10: Komplett Sidlayout</h2>
   <p>Bygg en komplett sidlayout med header, navigering, innehåll och footer inom <code>.main-container</code> med hjälp av CSS Grid.</p>
   <style>
-    /* Lägg din CSS-styling här */
+    /* Lösning */
+    .main-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav content"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+      grid-gap: 10px;
+    }
+    .header {
+      grid-area: header;
+    }
+    .nav {
+      grid-area: nav;
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      grid-area: content;
+    }
+    .footer {
+      grid-area: footer;
+    }
+    .nav-link {
+      margin: 5px 0;
+    }
   </style>
   <div class="main-container">
     <header class="header">Header</header>
